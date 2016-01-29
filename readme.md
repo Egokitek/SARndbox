@@ -23,25 +23,18 @@ root for `make install`
 ## Install
 _Only differences from upstream README noted._
 
-1. Vrui
+Set Environment
 
-    cd ~/src/Vrui-3.1-004
-    make INSTALLDIR=$HOME/sandbox
-    make install INSTALLDIR=$HOME/sandbox
+    export INSTALLDIR=$HOME/sandbox 
+    export VRUI_MAKEDIR=$HOME/sandbox/share/Vrui-3.1/make
 
-2. Kinect
+and then for each of Vrui, Kinect and SARndbox run:
 
-    cd ~/src/Kinect-2.8-002
-    make VRUI_MAKEDIR=$HOME/sandbox/share/Vrui-3.1/make
-    make install INSTALLDIR=$HOME/sandbox
+    cd ~/src/$program
+    make VRUI_MAKEDIR=$VRUI_MAKEDIR
+    make install INSTALLDIR=$INSTALLDIR VRUI_MAKEDIR=$VRUI_MAKEDIR
 
-3. SARndbox
-
-    cd ~/code/SARndbox
-    make VRUI_MAKEDIR=$HOME/sandbox/share/Vrui-3.1/make
-    make install INSTALLDIR=$HOME/sandbox
-
-
+See `yksandbox-install.sh`
 
 
 ## Extras
