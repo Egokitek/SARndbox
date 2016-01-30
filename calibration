@@ -54,9 +54,14 @@ Background_
 
 2. Align center of calibration wand with the white cross hairs, there
 should be a green circle projected, and press `=`. The cross hair will
-move a a handspan or so away, realign with wand and press `=` again. Repeat
-a dozen times until red crosshairs are displayed as well. The red
-crosshairs should be very close to the center of the calibration wand,
+move a a handspan away, realign with wand and press `=` again. Repeat
+a dozen times until red crosshairs are displayed as well. 
+
+After ~5 alignments dig a hole in the sand to the bottom in the middle
+somewhere. Press `-` to calculate the new background plane, align to the
+hole bottom and then carry on till red crosshairs show up.
+
+The red crosshairs should be very close to the center of the calibration wand,
 less than 5mm, no matter where you move it. If it's too far out start
 over. 1mm or better is a great result.  
 
@@ -65,6 +70,5 @@ If the circle is yellow move wand up or down until it turns green,
 keeping center of wand aligned with crosshairs. Watch for stray hand
 or arm in the camera view, it might think that's the wand instead.
      
-
 
 
