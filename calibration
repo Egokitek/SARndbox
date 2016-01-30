@@ -1,0 +1,70 @@
+_Notes from calibration video, circa Oct 2015. Meant as a quick reference only, assumes you've already watched the video. The steps in the video differ from the README._
+
+
+1. Mount camera, run `RawKinectViewer` and align so it covers sandbox area as best possible.
+
+2. lay piece of cardboard over box to create uniform flat surface
+
+3. In viewer zoom (mouse wheel) and pan (Z) so sandbox fills window
+
+4. Press `1`, keep holding key down and _R-mouse >> Extract Planes_, let go `1`
+
+5. _R-mouse >> Average Frames_. Display will stop jittering.
+
+6. Postion cursor at top left of flat area (precision not needed). Press and hold `1`, drag
+mouse to bottom right corner, let go `1`. 
+
+7. Deselect _Average Frames_, remove cardboard.
+
+8. For `2` assign _R-Mouse >> Measure 3D Positions_.
+
+9. _R-mouse >> Average Frames_
+
+10. For each corner zoom in tightly and capture position with `2`, don't
+get the wall. Results print to shell window. Order: Lower left, lower right, upper left, upper right
+
+11. From shell window copy the _Camera-space plane equation_ line and
+the 4 lines of corner coordinates.
+
+12. Edit or create `etc/SARndbox-1.6/BoxLayout.txt` and paste
+coordinates. First line needs reformatting (strip text and replace `=`
+with `,`). Last number in first line is "sea level" in cm from camera, lower it
+10-15cm since the number reported is for the cardboard. Adjust later at
+will.
+
+Old:
+
+    Camera-space plane equation: x * (0.0310485, 0.119382, 0.992363) = -85.5875
+
+New:
+
+    (0.0310485, 0.119382, 0.992363), -95.0
+
+(            -45.6926,             -31.9926,             -89.6441)
+(             43.1814,             -33.2709,             -90.5811)
+(            -44.9845,              33.5463,             -98.3027)
+(             44.3695,              32.0398,             -99.9947)
+
+## Align Topography
+
+Run `CalibrateProjector`
+
+1. To key `=` assign _R-mouse >> Capture_, and `-` to _Capture
+Background_
+
+2. Align center of calibration wand with the white cross hairs, there
+should be a green circle projected, and press `=`. The cross hair will
+move a a handspan or so away, realign with wand and press `=` again. Repeat
+a dozen times until red crosshairs are displayed as well. The red
+crosshairs should be very close to the center of the calibration wand,
+less than 5mm, no matter where you move it. If it's too far out start
+over. 1mm or better is a great result.  
+
+The green circle may not overlap with calibration wand, that's okay.
+If the circle is yellow move wand up or down until it turns green,
+keeping center of wand aligned with crosshairs. Watch for stray hand
+or arm in the camera view, it might think that's the wand instead.
+     
+
+
+
