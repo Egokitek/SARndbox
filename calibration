@@ -7,7 +7,7 @@ _Notes from calibration video, circa Oct 2015. Meant as a quick reference only, 
 
 3. In viewer zoom (mouse wheel) and pan (Z) so sandbox fills window
 
-4. Press `1`, keep holding key down and _R-mouse >> Extract Planes_, let go `1`
+4. Press `1`, keep holding key down and move mouse cursor to _Extract Planes_, let go `1`
 
 5. _R-mouse >> Average Frames_. Display will stop jittering.
 
@@ -16,7 +16,7 @@ mouse to bottom right corner, let go `1`.
 
 7. Deselect _Average Frames_, remove cardboard.
 
-8. For `2` assign _R-Mouse >> Measure 3D Positions_.
+8. For `2` assign _Mouse >> Measure 3D Positions_.
 
 9. _R-mouse >> Average Frames_
 
@@ -47,12 +47,14 @@ New:
 
 ## Align Topography
 
-Run `CalibrateProjector`
+Run `CalibrateProjector -s 1280 800` (adjust for projector resolution)
 
 1. To key `=` assign _R-mouse >> Capture_, and `-` to _Capture
 Background_
 
-2. Align center of calibration wand with the white cross hairs, there
+2. Move window to Projector display and enter full screen mode (F11)
+
+3. Align center of calibration wand with the white cross hairs, there
 should be a green circle projected, and press `=`. The cross hair will
 move a a handspan away, realign with wand and press `=` again. Repeat
 a dozen times until red crosshairs are displayed as well. 
